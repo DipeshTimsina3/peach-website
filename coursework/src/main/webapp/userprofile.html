@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>User Profile</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		body {
+			background-color: #f2f2f2;
+			font-family: Arial, sans-serif;
+		}
+		.profile {
+			background-color: #fff;
+			border-radius: 5px;
+			box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.2);
+			margin: 20px auto;
+			max-width: 600px;
+			padding: 20px;
+			text-align: center;
+		}
+		h2 {
+			color: #333;
+			margin-bottom: 20px;
+		}
+		img {
+			border-radius: 50%;
+			max-width: 150px;
+			margin: 10px auto;
+		}
+		table {
+			margin: 10px auto;
+			text-align: left;
+			width: 100%;
+		}
+		table td {
+			padding: 10px;
+		}
+		table td:first-child {
+			font-weight: bold;
+			width: 30%;
+		}
+		.edit {
+			display: block;
+			margin: 20px auto;
+			text-align: center;
+			width: 150px;
+		}
+		.edit a {
+			background-color: #4CAF50;
+			border: none;
+			border-radius: 3px;
+			color: #fff;
+			cursor: pointer;
+			font-size: 16px;
+			padding: 10px;
+			text-decoration: none;
+			width: 100%;
+		}
+		.edit a:hover {
+			background-color: #3e8e41;
+		}
+	</style>
+</head>
+<body>
+	<form action = "profile.jsp" method = "post">
+	<div class="profile">
+	
+		<img src="profile-photo.jpg" alt="Profile Photo">
+		<h2>User Profile</h2>
+		<table>
+			<tr>
+				<td>First Name:</td>
+				<td>request.getParameter("first_name")</td>
+			</tr>
+			<tr>
+				<td>Last Name:</td>
+				<td>request.getParameter("last_name")</td>
+			</tr>
+			<tr>
+				<td>address :</td>
+				<td>request.getParameter("address")</td>
+			</tr>
+			<tr>
+				<td>contact :</td>
+				<td>request.getParameter("contact")</td>
+			</tr>
+			<tr>
+				<td>Email :</td>
+				<td>request.getParameter("email")</td>
+			</tr>
+			<tr>
+				<td>Password:</td>
+				<td>request.getParameter("password")</td>
+			</tr>
+		</table>
+		<div class="edit">
+			<a href="edit-profile.jsp">Edit Profile</a>
+		</div>
+	</div>
+	</form>
+</body>
+</html>
